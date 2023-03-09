@@ -275,39 +275,3 @@ const filterByGenre = (arr, givenGenre) => arr.filter(({
 const filteredGames = filterByGenre(games, "RPG");
 console.log(filteredGames);
 // Output: [{title: "The Witcher 3: Wild Hunt", developer: "CD Projekt Red", genre: "RPG"}]
-
-
-// Write an ES6 function that takes an array of objects containing car information (make, model, year) and returns an array with only the car model that were made after the year 2012.
-
-const carsDetails = [{
-        make: "Toyota",
-        model: "Corolla",
-        year: 2010
-    },
-    {
-        make: "Honda",
-        model: "Civic",
-        year: 2012
-    },
-    {
-        make: "Toyota",
-        model: "Camry",
-        year: 2015
-    },
-    {
-        make: "Ford",
-        model: "Mustang",
-        year: 2018
-    },
-];
-
-// Your code here
-const getCarModel = arr => arr.filter(({
-    year
-}) => year > 2012).map(({
-    model
-}) => model)
-
-const carModels = getCarModel(carsDetails);
-console.log(carModels);
-// Output: ["Camry", "Mustang"]
