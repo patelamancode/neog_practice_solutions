@@ -85,55 +85,26 @@ let array = [4, 78, 8, 3, 6, 0, 12, 34];
 
 // 6 : Write an ES6 function that takes an array of objects and a property name and returns a new array with only the values of that property. Avoid using in-built methods.
 
-// const givenArrayOfObjects = [{
-//         name: "John",
-//         age: 21
-//     },
-//     {
-//         name: "Mary",
-//         age: 22
-//     },
-//     {
-//         name: "Peter",
-//         age: 23
-//     },
-// ];
+const givenArrayOfObjects = [{
+        name: "John",
+        age: 21
+    },
+    {
+        name: "Mary",
+        age: 22
+    },
+    {
+        name: "Peter",
+        age: 23
+    },
+];
 
-// const getValues = (arr, key) => {
-//     let resultedArray = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         resultedArray.push(arr[i][key])
-//     }
-//     return console.log(resultedArray);
-// }
-
-// getValues(givenArrayOfObjects, "name")
-// getValues(givenArrayOfObjects, "age")
-
-
-// ========================
-
-//  7: Write an ES6 function that takes the users' details and returns the data with team ID. Avoid using in-built methods.
-
-
-const userData = {
-    firstName: "John",
-    lastName: "Dee"
-};
-
-const podAndTeamAllocation = (obj, inputID) => {
-    // obj["teamID"] = "inputID";
-    let {
-        firstName,
-        lastName,
-        ["teamID"]: inputID
-    } = obj
-
-    return ({
-        firstName,
-        lastName,
-        teamID
-    })
+const getValues = (arr) => {
+    let resultedArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        resultedArray.push(arr[i].name)
+    }
+    return console.log(resultedArray);
 }
 
-podAndTeamAllocation(userData, 13245)
+getValues(givenArrayOfObjects)

@@ -122,18 +122,11 @@ const userData = {
 };
 
 const podAndTeamAllocation = (obj, inputID) => {
-    // obj["teamID"] = "inputID";
     let {
         firstName,
-        lastName,
-        ["teamID"]: inputID
-    } = obj
-
-    return ({
-        firstName,
-        lastName,
-        teamID
-    })
+        lastName
+    } = obj;
+    console.log(firstName, lastName)
 }
 
-podAndTeamAllocation(userData, 13245)
+podAndTeamAllocation(userData)
